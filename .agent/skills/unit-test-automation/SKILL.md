@@ -23,9 +23,10 @@ To automate an 8-step unit testing cycle ensuring high quality and coverage with
     - **Constraint**: Never modify source/feature files to make tests pass.
 7. **Coverage Analysis**: Execute your coverage tool to generate an XML/JSON report.
 8. **Verify Thresholds**:
-    - **Diff Coverage**: Ensure critical business logic, security, and high-risk areas in modified lines are covered. Aim for high coverage (>80%) but prioritize meaning over metrics.
-    - Confirm global project coverage is at least 90%.
+    - **Diff Coverage**: Ensure critical business logic, security, and high-risk areas in modified lines are covered.
+    - Confirm code coverage for the changes in the current feature branch is at least 90%.
 
 ## Constraints
-- **Source Integrity**: Only files matching test patterns (e.g., `*.test.ts`) can be modified during Step 6.
-- **Thresholds**: Task must fail if critical business logic is untested or Global Coverage is < 90%.
+- **Source Integrity**: Only files matching test patterns (e.g., `*.test.ts`, `*.test.tsx`) can be modified during Step 6.
+- **Thresholds**: Task must fail if critical business logic is untested or if the code coverage for the changes in the current feature branch is < 90%.
+- **Comments**: Avoid useless comments. Add comments only where you need to explain *why* something is written, not *what* is going on. The code should be self-explanatory.
